@@ -1,0 +1,64 @@
+﻿@model ArtiLib.Entites.PrestationArtisan
+
+@{
+    ViewBag.Title = "ArtiLib - Détails de la prestation de l'artisan";
+}
+
+<h2>Détails de la prestation de l'artisan</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPrestation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdPrestation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdArtisan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdArtisan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarif)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reduction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reduction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourteDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourteDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LongueDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LongueDescription)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Retour à la liste des prestations de l'artisan", "Index")
+</p>

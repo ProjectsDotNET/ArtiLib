@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ArtiLib.Entites.StatutRendezVous>
+
+@{
+    ViewBag.Title = "ArtiLib - Liste des statuts rendez-vous";
+}
+
+<h2>Liste des statuts rendez-vous</h2>
+
+<p>
+    @Html.ActionLink("Ajouter un statut rendez-vous", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Libelle)
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Libelle)
+            </td>
+            <td>
+                @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Détails", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Supprimer", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>

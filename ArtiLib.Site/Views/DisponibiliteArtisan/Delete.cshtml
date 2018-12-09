@@ -1,0 +1,38 @@
+﻿@model ArtiLib.Entites.DisponibiliteArtisan
+
+@{
+    ViewBag.Title = "ArtiLib - Supprimer une disponibilité de l'artisan";
+}
+
+<h2>Supprimer une disponibilité de l'artisan</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdArtisan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdArtisan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateHeure)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateHeure)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Supprimer" class="btn btn-default" /> |
+            @Html.ActionLink("Retour à la liste des disponibilités de l'artisan", "Index")
+        </div>
+    }
+</div>

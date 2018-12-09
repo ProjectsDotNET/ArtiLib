@@ -1,0 +1,24 @@
+﻿@model ArtiLib.Entites.Prestation
+
+@{
+    ViewBag.Title = "ArtiLib - Détails de la prestation";
+}
+
+<h2>Détails de la prestation</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Libelle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Libelle)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Retour à la liste des prestations", "Index")
+</p>

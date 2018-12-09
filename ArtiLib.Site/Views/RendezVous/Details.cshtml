@@ -1,0 +1,48 @@
+﻿@model ArtiLib.Entites.RendezVous
+
+@{
+    ViewBag.Title = "ArtiLib - Détails du rendez-vous";
+}
+
+<h2>Détails du rendez-vous</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdClient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdDisponibiliteArtisan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdDisponibiliteArtisan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdStatutRendezVous)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdStatutRendezVous)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdRendezVousDeplace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdRendezVousDeplace)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Retour à la liste des rendez-vous", "Index")
+</p>

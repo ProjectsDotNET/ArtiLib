@@ -1,0 +1,30 @@
+﻿@model ArtiLib.Entites.StatutRendezVous
+
+@{
+    ViewBag.Title = "ArtiLib - Supprimer le statut rendez-vous";
+}
+
+<h2>Supprimer le statut rendez-vous</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Libelle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Libelle)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Supprimer" class="btn btn-default" /> |
+            @Html.ActionLink("Retour à la liste des statuts rendez-vous", "Index")
+        </div>
+    }
+</div>

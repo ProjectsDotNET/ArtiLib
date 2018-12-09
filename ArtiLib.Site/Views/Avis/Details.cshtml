@@ -1,0 +1,40 @@
+﻿@model ArtiLib.Entites.Avis
+
+@{
+    ViewBag.Title = "ArtiLib - Détails de l'avis";
+}
+
+<h2>Détails de l'avis</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreEtoile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreEtoile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Commentaire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Commentaire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPrestationArtisan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdPrestationArtisan)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Retour à la liste des avis", "Index")
+</p>

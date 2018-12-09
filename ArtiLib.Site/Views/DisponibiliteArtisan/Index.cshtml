@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ArtiLib.Entites.DisponibiliteArtisan>
+
+@{
+    ViewBag.Title = "ArtiLib - Liste des disponibilités de l'artisan";
+}
+
+<h2>Liste des disponibilités de l'artisan</h2>
+
+<p>
+    @Html.ActionLink("Ajouter une disponibilité pour l'artisan", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdArtisan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateHeure)
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdArtisan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateHeure)
+            </td>
+            <td>
+                @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Détails", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Supprimer", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>

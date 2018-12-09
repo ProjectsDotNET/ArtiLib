@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ArtiLib.Entites.RendezVous>
+
+@{
+    ViewBag.Title = "ArtiLib - Liste des rendez-vous";
+}
+
+<h2>Liste des rendez-vous</h2>
+
+<p>
+    @Html.ActionLink("Ajouter un rendez-vous", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdClient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdDisponibiliteArtisan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdStatutRendezVous)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdRendezVousDeplace)
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdClient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdDisponibiliteArtisan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdStatutRendezVous)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdRendezVousDeplace)
+            </td>
+            <td>
+                @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Détails", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Supprimer", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>

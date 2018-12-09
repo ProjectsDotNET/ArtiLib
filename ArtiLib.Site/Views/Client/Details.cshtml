@@ -1,0 +1,80 @@
+﻿@model ArtiLib.Entites.Client
+
+@{
+    ViewBag.Title = "ArtiLib - Détails du client";
+}
+
+<h2>Détails du client</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prenom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prenom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateNaissance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateNaissance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodePostal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodePostal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ville)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ville)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Retour à la liste des clients", "Index")
+</p>
